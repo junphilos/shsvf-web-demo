@@ -1,0 +1,58 @@
+@font-face {
+	font-family: "Source Han Sans";
+	src: url("../font/SourceHanSans-VF.otf.woff2") format("opentype");
+	font-weight: 1 1000;
+	font-stretch: 50% 200%;
+}
+
+body {
+	font-family: "Source Han Sans", sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+
+.animated-text {
+	font-size: 3rem;
+	animation: weightChange 4s infinite alternate;
+}
+
+/* 各要素に0.3秒ずつ遅延を設定 */
+.animated-text:nth-child(1) {
+	animation-delay: 0s;
+}
+.animated-text:nth-child(2) {
+	animation-delay: 0.3s;
+}
+.animated-text:nth-child(3) {
+	animation-delay: 0.6s;
+}
+.animated-text:nth-child(4) {
+	animation-delay: 0.9s;
+}
+.animated-text:nth-child(5) {
+	animation-delay: 1.2s;
+}
+.animated-text:nth-child(6) {
+	animation-delay: 1.5s;
+}
+.animated-text:nth-child(7) {
+	animation-delay: 1.8s;
+}
+.animated-text:nth-child(8) {
+	animation-delay: 2.1s;
+}
+
+@keyframes weightChange {
+	0% {
+		font-variation-settings: "wght" 300; /* 細め */
+	}
+	50% {
+		font-variation-settings: "wght" 700; /* 太め */
+	}
+	100% {
+		font-variation-settings: "wght" 300; /* 細めに戻る */
+	}
+}
